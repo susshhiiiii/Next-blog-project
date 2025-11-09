@@ -1,6 +1,7 @@
-"use client"
+"use client";
 import Link from "next/link";
 import React from "react";
+import { usePathname } from "next/navigation";
 
 const data = [
   {
@@ -36,19 +37,22 @@ const data = [
 ];
 
 function Navbar() {
+  const pathname = usePathname();
   return (
     <div className="flex py-5 justify-between">
       <div>
         <Link className="font-bold" href={"/"}>
           lamania
-        </Link>        
+        </Link>
       </div>
       <div className="flex md:flex-row flex-col">
-        {data.map((link) => (
-          <Link key={link.id} className="ms-2" href={link.link}>
+        {data.map((link) => {
+          const isActive=pathname===link.link;
+          return (<Link key={link.id} className={`${isActive?"text-green-300":""} ms-2`} href={link.link}>
             {link.title}
-          </Link>
-        ))}
+          </Link>);
+        })}
+        <button className="ms-2">Logout</button>
       </div>
     </div>
   );

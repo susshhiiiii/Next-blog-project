@@ -1,5 +1,11 @@
 import React from 'react'
 
+const data=[
+  {
+    
+  }
+]
+
 function Footer() {
   return (
     <div className='flex justify-between'>
