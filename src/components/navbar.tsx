@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
+import DarkModeToggle from "./dark-mode-toggle";
 
 const data = [
   {
@@ -46,6 +47,7 @@ function Navbar() {
         </Link>
       </div>
       <div className="flex md:flex-row flex-col">
+        <DarkModeToggle/>
         {data.map((link) => {
           const isActive=pathname===link.link;
           return (<Link key={link.id} className={`${isActive?"text-green-300":""} ms-2`} href={link.link}>
