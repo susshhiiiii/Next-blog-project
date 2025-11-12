@@ -8,7 +8,7 @@ export default function Home() {
       Better Design for the digital Products.
     </h1>
     <p className="text-xl mb-8">Turning your idea into Reality. We bring together the teams from the global tech industry.</p>
-    <button className="bg-green-700 rounded-lg font-bold px-3 py-5">See Our Works</button>
+    <button className="bg-green-700 rounded-lg font-bold text-white px-3 py-5">See Our Works</button>
     </div>
     <div className="basis-1/2 self-center justify-self-center">
       <Image src={Hero} alt={""}></Image>
