@@ -4,10 +4,10 @@ import React, { useContext } from 'react'
 function DarkModeToggle() {
   const {mode,toggle}=useContext(ThemeContext)
   return (
-    <div className='flex border rounded-3xl relative'>      
+    <div onClick={()=>toggle()} className='cursor-pointer flex border rounded-3xl relative'>      
       <div className='mx-1'>🌙</div>
       <div className='me-1'>☀️</div>
-      <div onClick={()=>toggle()} className={`bg-green-600 absolute p-3 rounded-4xl ${mode!=='light'? 'right-0':'left-0'}`}></div>
+      <div className={`bg-green-600 absolute p-3 rounded-4xl ${mode!=='light'? 'right-0':'left-0'}`}></div>
     </div>
   )
 }

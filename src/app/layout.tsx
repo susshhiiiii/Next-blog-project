@@ -29,10 +29,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased container mx-auto`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         <ThemeContextProvider>
-          <div className="min-h-screen content-between flex flex-col text-black dark:text-gray-300">
+          <div className="min-h-screen content-between flex container mx-auto  flex-col">
             <div>
               <Navbar/>
             </div>
